@@ -18,5 +18,5 @@ export async function GET({ platform }) {
   const result = await platform.env.DB.prepare(
     "SELECT * FROM users LIMIT 100"
   ).run();
-  return new Response(JSON.stringify(result));
+  return new Response(JSON.stringify(result,null,2));
 }
